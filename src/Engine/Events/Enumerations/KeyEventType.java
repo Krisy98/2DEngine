@@ -1,4 +1,4 @@
-package Engine.Events;
+package Engine.Events.Enumerations;
 
 public enum KeyEventType {
     PRESSED,

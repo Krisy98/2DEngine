@@ -1,14 +1,21 @@
 package Engine.Events;
 
 import Engine.Controller.Controller;
+import Engine.Events.Enumerations.EventType;
+
 import java.util.List;
 
 public abstract class EventManager {
 
-    List<Controller> controllers;
+    private List<Controller> controllers;
 
-    public abstract void createKeyEvent(KeyEventType type);
+    /**
+     * Create a Controller with the Event type necessary
+     * Add it to his list of controllers
+     * And return the controller
+     */
+    public abstract Controller createController(EventType type);
 
-    public abstract void createMouseEvent(MouseEventType type);
+    public List<Controller> getControllers(){ return controllers; }
 
 }
