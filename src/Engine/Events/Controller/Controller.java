@@ -1,4 +1,4 @@
-package Engine.Controller;
+package Engine.Events.Controller;
 
 import javafx.event.EventHandler;
 
