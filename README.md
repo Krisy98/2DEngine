@@ -1,2 +1,2 @@
-# 2DEngine
+# Engine
 Must be reusable for futur projects
