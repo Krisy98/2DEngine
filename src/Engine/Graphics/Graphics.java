@@ -1,13 +1,13 @@
 package Engine.Graphics;
 
-import Engine.Events.EventsToScene;
+import Engine.Events.EventManager;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 
-public class Graphics extends EventsToScene {
+public class Graphics extends EventManager {
 
     private Stage stage;
     private Group root;
@@ -15,6 +15,8 @@ public class Graphics extends EventsToScene {
     public Graphics(Stage stage){
         this.stage = stage;
         this.root = new Group();
+
+        super.setRoot(this.root);
     }
 
     /**
@@ -27,6 +29,9 @@ public class Graphics extends EventsToScene {
         Scene scene = new Scene(this.root);
 
         this.stage.setScene(scene);
+
+        //Node node = this.root.getChildren().get(0);
+        //node.getParent();
     }
 
     /**

@@ -1,10 +1,10 @@
 package Engine.Entity;
 
 import javafx.scene.image.ImageView;
-
+import java.util.LinkedList;
 import java.util.List;
 
-public abstract class Entity {
+public class Entity {
 
     private ImageView image;
     private List<Double> speed;
@@ -22,6 +22,11 @@ public abstract class Entity {
 
         image.setX(positionX);
         image.setY(positionY);
+
+        speed = new LinkedList<>();
+
+        speed.add(0.0);
+        speed.add(0.0);
     }
 
     public void setWidth(Double width){ this.image.setFitWidth(width); }
@@ -39,8 +44,6 @@ public abstract class Entity {
     public Double getXCoordinate(){ return this.image.getX(); }
 
     public Double getYCoordinate(){ return this.image.getY(); }
-
-    public abstract void initSpeed();
 
     public void setSpeedX(Double speedX){ this.speed.set(0, speedX); }
 

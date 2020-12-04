@@ -10,15 +10,21 @@ public class Physics {
      * @param entity is the entity to move
      */
     public void move(Entity entity){
-        Double speed = entity.getSpeedX();
-        Double coordinate = entity.getXCoordinate();
+        Double res = plus(entity.getSpeedX(), entity.getXCoordinate());
+        entity.setXCoordinate(res);
 
-        entity.setXCoordinate(coordinate + speed);
+        res = plus(entity.getSpeedY(), entity.getYCoordinate());
+        entity.setYCoordinate(res);
+    }
 
-        speed = entity.getSpeedY();
-        coordinate = entity.getYCoordinate();
-
-        entity.setYCoordinate(coordinate + speed);
+    /**
+     * Calculate two variables of Double type and return the result
+     * @param a first variable to add
+     * @param b second variable to add
+     * @return the result of an addition of a and b
+     */
+    private Double plus(Double a, Double b){
+        return a + b;
     }
 
 }
