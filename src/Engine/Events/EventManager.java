@@ -4,6 +4,7 @@ import Engine.Events.Controllers.Controller;
 import Engine.Events.Enumerations.KeyEventType;
 import Engine.Events.Enumerations.MouseEventType;
 import javafx.scene.Group;
+import javafx.scene.Node;
 
 public abstract class EventManager {
 
@@ -45,5 +46,7 @@ public abstract class EventManager {
                 break;
         }
     }
+
+
 
 }

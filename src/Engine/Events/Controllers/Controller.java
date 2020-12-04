@@ -5,6 +5,9 @@ import javafx.event.EventHandler;
 public class Controller {
 
     private EventHandler eventHandler;
+    private String name;
+
+    public Controller(String name){ this.name = name; }
 
     public EventHandler getEventHandler(){ return eventHandler; }
 
