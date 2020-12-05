@@ -4,7 +4,6 @@ import Engine.Events.Controllers.Controller;
 import Engine.Events.Enumerations.KeyEventType;
 import Engine.Events.Enumerations.MouseEventType;
 import javafx.scene.Group;
-import javafx.scene.Node;
 
 public abstract class EventManager {
 
@@ -14,6 +13,7 @@ public abstract class EventManager {
 
     /**
      * Add a event to the graphic scene of type KeyEventType
+     * If you want remove the event, set controller at null
      * @param controller contains operations for each event released
      * @param type define the event action
      */
@@ -30,6 +30,7 @@ public abstract class EventManager {
 
     /**
      * Add a event to the graphic scene of type MouseEventType
+     * If you want remove the event, set controller at null
      * @param controller contains operations for each event released
      * @param type define the event action
      */
@@ -46,7 +47,4 @@ public abstract class EventManager {
                 break;
         }
     }
-
-
-
 }

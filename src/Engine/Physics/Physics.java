@@ -3,7 +3,6 @@ package Engine.Physics;
 import Engine.Entity.Entity;
 import Engine.Entity.Text;
 import javafx.geometry.Bounds;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,7 +38,6 @@ public class Physics {
      * @return true if these entities are collided, if not return false
      */
     private boolean checkCollisionBetweenEntity(Entity entity, Entity otherEntity){
-
         Bounds bounds = entity.getImage().getBoundsInLocal();
 
         return bounds.intersects(otherEntity.getImage().getBoundsInLocal());
