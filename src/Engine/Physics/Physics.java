@@ -2,14 +2,47 @@ package Engine.Physics;
 
 import Engine.Entity.Entity;
 import Engine.Entity.Text;
+import javafx.geometry.Bounds;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Physics {
 
-    public List<Entity> checkCollision(List<Entity> entities){
-        // TODO
-        return null;
+    /**
+     * Check collision from a list of entities
+     * @param entities list of entities to test
+     * @return a list of couple of entities collided
+     */
+    public List<List<Entity>> checkCollision(List<Entity> entities){
+        List<List<Entity>> collided = new ArrayList<>();
+
+        for (Entity entity : entities) {
+            for (Entity otherEntity : entities) {
+                if (entity != otherEntity && checkCollisionBetweenEntity(entity, otherEntity)) {
+                    List<Entity> temp = new ArrayList<>();
+
+                    temp.add(entity);
+                    temp.add(otherEntity);
+
+                    collided.add(temp);
+                }
+            }
+        }
+        return collided;
+    }
+
+    /**
+     * Test if two entities are collide
+     * @param entity the first entity
+     * @param otherEntity the second entity
+     * @return true if these entities are collided, if not return false
+     */
+    private boolean checkCollisionBetweenEntity(Entity entity, Entity otherEntity){
+
+        Bounds bounds = entity.getImage().getBoundsInLocal();
+
+        return bounds.intersects(otherEntity.getImage().getBoundsInLocal());
     }
 
     /**
