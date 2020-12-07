@@ -16,7 +16,7 @@ public abstract class EventManager {
      * @param controller contains operations for each event released
      * @param type define the event action
      */
-    public void addEventToScene(Controller controller, KeyEventType type){
+    public void setEventToScene(Controller controller, KeyEventType type){
         switch (type){
             case PRESSED:
                 this.root.getScene().setOnKeyPressed(controller.getEventHandler());
@@ -33,7 +33,7 @@ public abstract class EventManager {
      * @param controller contains operations for each event released
      * @param type define the event action
      */
-    public void addEventToScene(Controller controller, MouseEventType type){
+    public void setEventToScene(Controller controller, MouseEventType type){
         switch (type){
             case RELEASED:
                 this.root.getScene().setOnMouseReleased(controller.getEventHandler());
@@ -54,7 +54,7 @@ public abstract class EventManager {
      * @param controller contains operations for each event released
      * @param type define the event action
      */
-    public void addEvent(Entity entity, Controller controller, KeyEventType type){
+    public void setEvent(Entity entity, Controller controller, KeyEventType type){
         switch (type){
             case PRESSED:
                 entity.getImage().setOnKeyPressed(controller.getEventHandler());
@@ -72,7 +72,7 @@ public abstract class EventManager {
      * @param controller contains operations for each event released
      * @param type define the event action
      */
-    public void addEvent(Entity entity, Controller controller, MouseEventType type){
+    public void setEvent(Entity entity, Controller controller, MouseEventType type){
         switch (type){
             case RELEASED:
                 entity.getImage().setOnMouseReleased(controller.getEventHandler());

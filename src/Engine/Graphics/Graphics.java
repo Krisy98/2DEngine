@@ -33,9 +33,6 @@ public class Graphics extends EventManager {
         Scene scene = new Scene(this.root);
 
         this.stage.setScene(scene);
-
-        //Node node = this.root.getChildren().get(0);
-        //node.getParent();
     }
 
     /**

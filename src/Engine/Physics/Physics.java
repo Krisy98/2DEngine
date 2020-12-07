@@ -6,7 +6,7 @@ import javafx.geometry.Bounds;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Physics {
+public abstract class Physics {
 
     /**
      * Check collision from a list of entities
@@ -77,6 +77,11 @@ public class Physics {
      */
     public void setPositionText(Text text, Double positionX, Double positionY){
         text.setPosition(positionX, positionY);
+    }
+
+    public void setSpeed(Entity entity, Double speedX, Double speedY){
+        entity.setSpeedX(speedX);
+        entity.setSpeedY(speedY);
     }
 
     /**

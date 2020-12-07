@@ -13,4 +13,6 @@ public class Controller {
 
     public void setEventHandler(EventHandler eventHandler){ this.eventHandler = eventHandler; }
 
+    public String getName(){ return this.name; }
+
 }
