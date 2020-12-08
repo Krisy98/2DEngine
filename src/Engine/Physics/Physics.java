@@ -56,6 +56,11 @@ public abstract class Physics {
         entity.setYCoordinate(res);
     }
 
+    public void setPosition(Entity entity, Double positionX, Double positionY){
+        entity.setXCoordinate(positionX);
+        entity.setYCoordinate(positionY);
+    }
+
     /**
      * Change coordinates of the Text with speed
      * @param text to incur the action

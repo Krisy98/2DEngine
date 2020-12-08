@@ -72,9 +72,4 @@ public class GridPhysics extends Physics {
         return null;
     }
 
-    public void setPosition(Entity entity, Double positionX, Double positionY){
-        entity.setXCoordinate(positionX);
-        entity.setYCoordinate(positionY);
-    }
-
 }
