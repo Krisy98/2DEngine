@@ -29,18 +29,46 @@ public class GridPhysics extends Physics {
         grids.add(temp);
     }
 
+    /**
+     * Change coordinate to adapt it to the grid system
+     * @param entity concerned by the changement
+     * @return true if it is successful, false if not
+     */
     public boolean adaptEntityToTheGrid(Entity entity){
-        // TODO
-        return false;
+        List<Double> coordinates;
+
+        coordinates = getCoordinatesForGrid(entity.getXCoordinate(), entity.getYCoordinate());
+
+        if (coordinates == null) return false;
+
+        entity.setXCoordinate(coordinates.get(0));
+        entity.setYCoordinate(coordinates.get(1));
+
+        return true;
     }
 
-    public int getIndexes(Double x, Double y){
-        //TODO
-        return 1;
-    }
-
+    /**
+     * Test to adapt coordinate to the grid system
+     * @param x the X coordinate to test
+     * @param y the Y coordinate to test
+     * @return Return coordinates corresponding at the grid system if it exist
+     */
     public List<Double> getCoordinatesForGrid(Double x, Double y){
-        // TODO
+        List<Double> coordinates = new ArrayList<>();
+
+        for (Grid grid : grids){
+            List<Integer> indexes = grid.getIndexes(x, y);
+
+            if (indexes != null){
+                Double xCoordinate = grid.getPositionX() + indexes.get(0)*grid.getWidth();
+                Double yCoordinate = grid.getPositionY() + indexes.get(1)*grid.getHeight();
+
+                coordinates.add(xCoordinate);
+                coordinates.add(yCoordinate);
+
+                return coordinates;
+            }
+        }
         return null;
     }
 

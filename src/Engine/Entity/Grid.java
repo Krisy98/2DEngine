@@ -23,6 +23,27 @@ public class Grid {
         this.columnsNumber = columnsNumber;
     }
 
+    /**
+     * Return the corresponding indexes from the coordinates
+     * @param x is the X coordinate
+     * @param y is the Y coordinate
+     * @return a list of indexes
+     */
+    public List<Integer> getIndexes(Double x, Double y){
+        List<Integer> indexes = new ArrayList<>();
+        for (int nbRow=0; nbRow<rowNumber; nbRow++){
+            for (int nbColumn=0; nbColumn<columnsNumber; nbColumn++){
+                if (getPositionX() + nbRow*getWidth() < x && x < getPositionX() + (nbRow+1)*getWidth() &&
+                getPositionY() + nbColumn*getHeight() < y && y < getPositionY() + (nbColumn + 1)*getHeight()){
+                    indexes.add(nbRow);
+                    indexes.add(nbColumn);
+                    return indexes;
+                }
+            }
+        }
+        return null;
+    }
+
     public Double getWidth(){ return this.size.get(0); }
 
     public Double getHeight(){ return this.size.get(1); }
