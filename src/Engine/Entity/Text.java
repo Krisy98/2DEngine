@@ -12,9 +12,7 @@ public class Text {
 
     public void setText(String string){ this.text.setText(string); }
 
-    public javafx.scene.text.Text getText() {
-        return text;
-    }
+    public javafx.scene.text.Text getText() { return text; }
 
     public void setSize(double size){
         String fontName = this.text.getFont().getName(); // we keep the actual typeFace
