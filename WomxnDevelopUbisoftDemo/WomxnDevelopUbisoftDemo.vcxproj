@@ -209,9 +209,11 @@ xcopy /y /d  "$(SolutionDir)external\SFML-2.5.1\bin\*.dll" "$(OutDir)"</Command>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Engine\FileReader\File.cpp" />
-    <ClCompile Include="Engine\Game.cpp" />
+    <ClCompile Include="Engine\GameBase.cpp" />
     <ClCompile Include="Engine\Physics\Collision.cpp" />
-    <ClCompile Include="Game\GameDemo.cpp" />
+    <ClCompile Include="Game\Context\Menu.cpp" />
+    <ClCompile Include="Game\Context\Play.cpp" />
+    <ClCompile Include="Game\Game.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -219,9 +221,11 @@ xcopy /y /d  "$(SolutionDir)external\SFML-2.5.1\bin\*.dll" "$(OutDir)"</Command>
     <ClInclude Include="..\external\imgui-master\imgui_internal.h" />
     <ClInclude Include="..\external\imgui-sfml-master\imgui-SFML.h" />
     <ClInclude Include="Engine\FileReader\File.h" />
-    <ClInclude Include="Engine\Game.h" />
+    <ClInclude Include="Engine\GameBase.h" />
     <ClInclude Include="Engine\Physics\Collision.h" />
-    <ClInclude Include="Game\GameDemo.h" />
+    <ClInclude Include="Game\Context\Menu.h" />
+    <ClInclude Include="Game\Context\Play.h" />
+    <ClInclude Include="Game\Game.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>

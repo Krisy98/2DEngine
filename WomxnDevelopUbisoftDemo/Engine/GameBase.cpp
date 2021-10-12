@@ -1,4 +1,4 @@
-
+#include "stdafx.h"
 #include <Engine/GameBase.h>
 
 static constexpr float APP_MAX_FRAMERATE{ 60.0f };

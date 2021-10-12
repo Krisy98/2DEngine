@@ -1,11 +1,11 @@
 #include <stdafx.h>
 
-#include <Game/GameDemo.h>
+#include <Game/Game.h>
 
 
 int main(){
     
-     GameDemo game{};
+     Game game{};
      game.RunGameLoop();
     
     

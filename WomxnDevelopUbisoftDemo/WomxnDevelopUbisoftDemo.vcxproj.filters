@@ -20,17 +20,23 @@
     <ClCompile Include="..\external\imgui-master\imgui_tables.cpp">
       <Filter>Engine\ImGui</Filter>
     </ClCompile>
-    <ClCompile Include="Engine\Game.cpp">
-      <Filter>Engine</Filter>
-    </ClCompile>
     <ClCompile Include="Engine\Physics\Collision.cpp">
       <Filter>Engine\Physics</Filter>
     </ClCompile>
     <ClCompile Include="Engine\FileReader\File.cpp">
       <Filter>Engine\FileReader</Filter>
     </ClCompile>
-    <ClCompile Include="Game\GameDemo.cpp">
+    <ClCompile Include="Engine\GameBase.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Game.cpp">
       <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Context\Menu.cpp">
+      <Filter>Game\Context</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Context\Play.cpp">
+      <Filter>Game\Context</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -47,17 +53,23 @@
     <ClInclude Include="resource.h">
       <Filter>Resources</Filter>
     </ClInclude>
-    <ClInclude Include="Engine\Game.h">
-      <Filter>Engine</Filter>
-    </ClInclude>
     <ClInclude Include="Engine\Physics\Collision.h">
       <Filter>Engine\Physics</Filter>
     </ClInclude>
     <ClInclude Include="Engine\FileReader\File.h">
       <Filter>Engine\FileReader</Filter>
     </ClInclude>
-    <ClInclude Include="Game\GameDemo.h">
+    <ClInclude Include="Engine\GameBase.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Game.h">
       <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Context\Menu.h">
+      <Filter>Game\Context</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Context\Play.h">
+      <Filter>Game\Context</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -81,6 +93,9 @@
     </Filter>
     <Filter Include="Engine\FileReader">
       <UniqueIdentifier>{72333e9f-551a-4bf1-b712-3439e983e1c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Context">
+      <UniqueIdentifier>{2871e5e4-d277-4bb0-ada5-f6e717a95dae}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

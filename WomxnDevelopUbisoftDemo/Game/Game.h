@@ -2,10 +2,10 @@
 
 #include <Engine/GameBase.h>
 
-class GameDemo : public GameBase{
+class Game : public GameBase{
 
 public:
-    GameDemo();
+    Game();
 
     void Update(float deltaTime) override;
     void Render(sf::RenderTarget& target) override;
